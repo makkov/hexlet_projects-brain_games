@@ -1,6 +1,6 @@
 {
   "name": "brain_games_by_makkov",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -15,7 +15,7 @@
     "prepublishOnly": "npm run build",
     "babel": "babel"
   },
-  "author": "",
+  "author": "Maksim Kovalenko",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
