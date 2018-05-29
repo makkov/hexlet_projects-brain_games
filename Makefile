@@ -8,7 +8,7 @@ publish:
 	npm publish
 
 lint:
-	npm run eslint .
+	npm run eslint
 
 star-be:
 	npm run babel-node -- src/bin/brain-even.js
