@@ -1,7 +1,6 @@
 {
   "name": "brain_games_by_makkov",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -13,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "babel": "babel"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +22,17 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1"
-  }
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makkov/project-lvl1-s284.git"
+  },
+  "bugs": {
+    "url": "https://github.com/makkov/project-lvl1-s284/issues"
+  },
+  "homepage": "https://github.com/makkov/project-lvl1-s284#readme",
+  "description": ""
 }
