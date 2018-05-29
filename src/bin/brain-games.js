@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-import userName from '../'
+import {greeting} from '..'
+greeting()
