@@ -10,5 +10,5 @@ publish:
 lint:
 	npm run eslint .
 
-star-be:
+start-be:
 	npm run babel-node -- src/bin/brain-even.js
