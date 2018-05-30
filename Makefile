@@ -15,3 +15,6 @@ start-be:
 
 start-bc:
 	npm run babel-node -- src/bin/brain-calc.js
+
+start-bgcd:
+	npm run babel-node -- src/bin/brain-gcd.js
