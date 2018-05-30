@@ -16,7 +16,7 @@ const gameEven = () => {
 
     if (isFalseOrTrue(num, answer) === true) {
       console.log('Correct!');
-      i++;
+      i += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(num) ? 'yes' : 'no'}'.\n Let's try again, ${userName}!`);
       return;
@@ -25,4 +25,4 @@ const gameEven = () => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { gameEven };
+export default gameEven;

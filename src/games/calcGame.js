@@ -1,5 +1,5 @@
 import game from './gameBase';
-import { getRandom } from '../utils';
+import getRandom from '../utils';
 
 const add = (x, y) => x + y;
 const subtract = (x, y) => x - y;
