@@ -1,6 +1,6 @@
 {
   "name": "brain_games_by_makkov",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",

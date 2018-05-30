@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 import { getRandom } from './utils';
 
 const gameEven = () => {
-  const userName = readlineSync.question('May I have your name?: ');
   console.log('Welcome to the Brain Games! \nAnswer "yes" if number even otherwise answer "no".');
+  const userName = readlineSync.question('May I have your name?: ');
   const isEven = number => (number % 2) === 0;
   const isFalseOrTrue = (quest, answerOnQuest) => (isEven(quest) ? 'yes' : 'no') === answerOnQuest;
   const countTask = 3;
