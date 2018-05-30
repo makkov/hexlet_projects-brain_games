@@ -1,4 +1,4 @@
-import game from './gameBase';
+import game from '../gameBase';
 import getRandom from '../utils';
 
 const add = (x, y) => x + y;
@@ -7,13 +7,13 @@ const multiply = (x, y) => x * y;
 
 const operations = [
   {
-    text: '+',
+    sign: '+',
     method: add,
   }, {
-    text: '-',
+    sign: '-',
     method: subtract,
   }, {
-    text: '*',
+    sign: '*',
     method: multiply,
   },
 ];
@@ -24,7 +24,7 @@ const getQandA = () => {
   const firstNum = getRandom(1, 20);
   const secondNum = getRandom(1, 20);
   const operation = operations[getRandom(0, 2)];
-  const question = `${firstNum} ${operation.text} ${secondNum}`;
+  const question = `${firstNum} ${operation.sign} ${secondNum}`;
   const answer = operation.method(firstNum, secondNum);
 
   return {

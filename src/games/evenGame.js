@@ -1,28 +1,18 @@
-import readlineSync from 'readline-sync';
-import { getRandom } from '../utils';
+import game from '../gameBase';
+import getRandom from '../utils';
 
-const gameEven = () => {
-  console.log('Welcome to the Brain Games! \nAnswer "yes" if number even otherwise answer "no".');
-  const userName = readlineSync.question('May I have your name?: ');
-  const isEven = number => (number % 2) === 0;
-  const isFalseOrTrue = (quest, answerOnQuest) => (isEven(quest) ? 'yes' : 'no') === answerOnQuest;
-  const countTask = 3;
-  let i = 0;
-  while (i < countTask) {
-    const getAnswer = () => readlineSync.question('Your answer: ');
-    const num = getRandom(1, 20);
-    console.log(`Question:  ${num}`);
-    const answer = getAnswer();
+const isEven = num => (num % 2) === 0;
 
-    if (isFalseOrTrue(num, answer) === true) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(num) ? 'yes' : 'no'}'.\n Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+const description = 'Answer "yes" if number even otherwise answer "no".';
+
+const getQandA = () => {
+  const question = getRandom(1, 20);
+  const answer = isEven(question) ? 'yes' : 'no';
+
+  return {
+    answer,
+    question,
+  };
 };
 
-export default gameEven;
+export default () => game(description, getQandA);

@@ -13,8 +13,5 @@ lint:
 start-be:
 	npm run babel-node -- src/bin/brain-even.js
 
-start-berf:
-	npm run babel-node -- src/bin/brain-even.js
-
 start-bc:
 	npm run babel-node -- src/bin/brain-calc.js
