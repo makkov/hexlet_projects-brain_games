@@ -1,27 +1,29 @@
-import readlineSync from 'readline-sync'
-import {getRandom, isEven} from './equipment.js'
+import readlineSync from 'readline-sync';
+import { getRandom } from './utils';
 
-export const greeting = () => {
-  const userName = () => readlineSync.question('May I have your name?: ')
-  console.log('Welcome to the Brain Games! \nAnswer "yes" if number even otherwise answer "no".')
-  var nameGamer = userName()
+const gameEven = () => {
+  const userName = readlineSync.question('May I have your name?: ');
+  console.log('Welcome to the Brain Games! \nAnswer "yes" if number even otherwise answer "no".');
+  const isEven = number => (number % 2) === 0;
+  const isFalseOrTrue = (quest, answerOnQuest) => (isEven(quest) ? 'yes' : 'no') === answerOnQuest;
+  const countTask = 3;
 
-  const falseOrTrue = (quest, answerOnQuest) => (isEven(quest) ? 'yes' : 'no') === answerOnQuest //function "is that correct?"
+  let i = 0;
+  while (i < countTask) {
+    const getAnswer = () => readlineSync.question('Your answer: ');
+    const num = getRandom(1, 20);
+    console.log(`Question:  ${num}`);
+    const answer = getAnswer();
 
-  var i = 0
-  while (i < 3) {
-    const getAnswer = () => readlineSync.question('Your answer: ')
-    var num = getRandom(1, 20)
-    console.log(`Question:  ${num}`)
-    var answer = getAnswer()
-
-    if (falseOrTrue(num, answer) === true) {
+    if (isFalseOrTrue(num, answer) === true) {
       console.log('Correct!');
-      i++
+      i++;
     } else {
-      console.log(`'${isEven(num) ? 'no' : 'yes'}' is wrong answer ;(. Correct answer was '${isEven(num) ? 'yes' : 'no'}'.\n Let's try again, ${nameGamer}!`);
-      return
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(num) ? 'yes' : 'no'}'.\n Let's try again, ${userName}!`);
+      return;
     }
   }
-  console.log(`Congratulations, ${nameGamer}!`);
-}
+  console.log(`Congratulations, ${userName}!`);
+};
+
+export { gameEven };
