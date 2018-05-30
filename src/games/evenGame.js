@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandom } from './utils';
+import { getRandom } from '../utils';
 
 const gameEven = () => {
   console.log('Welcome to the Brain Games! \nAnswer "yes" if number even otherwise answer "no".');
@@ -7,7 +7,6 @@ const gameEven = () => {
   const isEven = number => (number % 2) === 0;
   const isFalseOrTrue = (quest, answerOnQuest) => (isEven(quest) ? 'yes' : 'no') === answerOnQuest;
   const countTask = 3;
-
   let i = 0;
   while (i < countTask) {
     const getAnswer = () => readlineSync.question('Your answer: ');
