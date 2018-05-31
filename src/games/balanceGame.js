@@ -24,7 +24,7 @@ const getBalance = (num) => {
 };
 
 const getQandA = () => {
-  const question = getRandom(1, 10);
+  const question = getRandom(1, 1000);
   const answer = getBalance(question);
 
   return {
