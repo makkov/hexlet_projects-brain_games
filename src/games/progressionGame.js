@@ -18,6 +18,7 @@ const getProgression = () => {
       questionProgression += ` ${firstMember + (difference * (i - 1))}`;
     }
   }
+  questionProgression = ((questionProgression).slice(1, questionProgression.lenght));
 
   return {
     questionProgression,
