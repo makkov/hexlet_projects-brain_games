@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 
 const countTask = 3;
 
-const startGame = (getQandA, i = 0) => {
-  if (i === countTask) return true;
+const startGame = (getQandA, numTask = 0) => {
+  if (numTask === countTask) return true;
 
   const { question, answer } = getQandA();
   console.log(`Question: ${question} `);
@@ -15,7 +15,7 @@ const startGame = (getQandA, i = 0) => {
   }
 
   console.log('Correct!');
-  return startGame(getQandA, i + 1);
+  return startGame(getQandA, numTask + 1);
 };
 
 export default (gameDescription, getQandA) => {

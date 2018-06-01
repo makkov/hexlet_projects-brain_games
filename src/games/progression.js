@@ -1,9 +1,9 @@
-import game from '../gameBase';
+import game from '../gameEngine';
 import getRandom from '../utils';
 
 const description = 'What number is missing in this progression?';
 
-const getProgression = () => {
+const getProgressionAndanswerNumb = () => {
   let questionProgression = '';
   const firstMember = getRandom(-10, 10);
   const difference = getRandom(-10, 10);
@@ -27,7 +27,7 @@ const getProgression = () => {
 };
 
 const getQandA = () => {
-  const { questionProgression, answerNumber } = getProgression();
+  const { questionProgression, answerNumber } = getProgressionAndanswerNumb();
   const question = questionProgression;
   const answer = answerNumber;
 

@@ -1,4 +1,4 @@
-import game from '../gameBase';
+import game from '../gameEngine';
 import getRandom from '../utils';
 
 const getGcd = (a, b) => {

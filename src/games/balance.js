@@ -1,8 +1,7 @@
-import game from '../gameBase';
+import game from '../gameEngine';
 import getRandom from '../utils';
 
 const description = 'Balance the given number.';
-
 
 const sumNumbers = (num) => {
   let sum = 0;
@@ -12,12 +11,13 @@ const sumNumbers = (num) => {
   return sum;
 };
 
-const getBalance = (num) => {
+const getBalancedNumber = (num) => {
   let answer = '';
-  let sumN = sumNumbers(num);
-  for (let i = `${num}`.length; i > 0; i--) {
-    let partBalanceNum = Math.floor(sumN / i);
-    sumN -= partBalanceNum;
+  let localSumNumbers = sumNumbers(num);
+  let i = `${num}`.length;
+  for (i; i > 0; i--) {
+    let partBalanceNum = Math.floor(localSumNumbers / i);
+    localSumNumbers -= partBalanceNum;
     answer += `${partBalanceNum}`;
   }
   return Number(answer);
@@ -25,7 +25,7 @@ const getBalance = (num) => {
 
 const getQandA = () => {
   const question = getRandom(1, 1000);
-  const answer = getBalance(question);
+  const answer = getBalancedNumber(question);
 
   return {
     answer,
