@@ -15,7 +15,7 @@ const getQandA = () => {
   const firstNum = getRandom(1, 20);
   const secondNum = getRandom(1, 20);
   const question = `${firstNum} ${secondNum}`;
-  const answer = getGcd(firstNum, secondNum);
+  const answer = String(getGcd(firstNum, secondNum));
 
   return {
     answer,

@@ -25,7 +25,7 @@ const getBalancedNumber = (num) => {
 
 const getQandA = () => {
   const question = getRandom(1, 1000);
-  const answer = getBalancedNumber(question);
+  const answer = String(getBalancedNumber(question));
 
   return {
     answer,

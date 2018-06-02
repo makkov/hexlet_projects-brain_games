@@ -9,7 +9,7 @@ const startGame = (getQandA, numTask = 0) => {
   console.log(`Question: ${question} `);
   const userAnswer = readlineSync.question('Your answer: ');
 
-  if (String(answer) !== userAnswer) {
+  if (answer !== userAnswer) {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
     return false;
   }

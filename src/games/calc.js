@@ -25,7 +25,7 @@ const getQandA = () => {
   const secondNum = getRandom(1, 20);
   const operation = operations[getRandom(0, 2)];
   const question = `${firstNum} ${operation.sign} ${secondNum}`;
-  const answer = operation.method(firstNum, secondNum);
+  const answer = String(operation.method(firstNum, secondNum));
 
   return {
     answer,
