@@ -14,7 +14,7 @@ const isPrime = (num) => {
 
 const getQandA = () => {
   const question = getRandom(1, 10);
-  const answer = String(isPrime(question) ? 'yes' : 'no');
+  const answer = isPrime(question) ? 'yes' : 'no';
 
   return {
     answer,
