@@ -3,33 +3,22 @@ import getRandom from '../utils';
 
 const description = 'What number is missing in this progression?';
 
-const getProgressionAndanswerNumb = () => {
-  let questionProgression = '';
+const getQandA = () => {
+  let question = '';
   const firstMember = getRandom(-10, 10);
   const difference = getRandom(-10, 10);
   const placeNumForQuest = getRandom(0, 9);
-  let answerNumber;
+  let answer;
   const n = 9;
   for (let i = 0; i <= n; i++) {
     if (i === placeNumForQuest) {
-      answerNumber = (firstMember + (difference * (i - 1)));
-      questionProgression += " ..";
+      answer = (firstMember + (difference * (i - 1)));
+      question += " ..";
     } else {
-      questionProgression += ` ${firstMember + (difference * (i - 1))}`;
+      question += ` ${firstMember + (difference * (i - 1))}`;
     }
   }
-  questionProgression = ((questionProgression).slice(1, questionProgression.lenght));
-
-  return {
-    questionProgression,
-    answerNumber,
-  };
-};
-
-const getQandA = () => {
-  const { questionProgression, answerNumber } = getProgressionAndanswerNumb();
-  const question = questionProgression;
-  const answer = answerNumber;
+  question = ((question).slice(1, question.lenght));
 
   return {
     answer,

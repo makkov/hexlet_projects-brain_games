@@ -4,13 +4,12 @@ import getRandom from '../utils';
 const description = 'Is this number prime?';
 
 const isPrime = (num) => {
-  let countWholeDiv = 1;
-  for (let i = 1; i < num; i++) {
+  for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      countWholeDiv++;
+      return false;
     }
   }
-  return countWholeDiv <= 2;
+  return num !== 1;
 };
 
 const getQandA = () => {
