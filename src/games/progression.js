@@ -21,6 +21,7 @@ const getQandA = () => {
   question = ((question).slice(1, question.lenght));
   answer = String(answer);
 
+
   return {
     answer,
     question,
