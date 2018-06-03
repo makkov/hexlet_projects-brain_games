@@ -10,7 +10,7 @@
 - progression (determine the element of the arithmetic progression)<p>
 ## to install the game:<p>
 npm instal brain_games_by_makkov -g<p>
-## to start the game, enter:<p>
+## to start the game:<p>
 - brain-balance<p>
 - brain-calc<p>
 - brain-even<p>
