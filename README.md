@@ -1,6 +1,6 @@
 <a href="https://codeclimate.com/github/makkov/project-lvl1-s284/maintainability"><img src="https://api.codeclimate.com/v1/badges/79bd06570c69943a6d73/maintainability" /></a>
 <a href="https://codeclimate.com/github/makkov/project-lvl1-s284/test_coverage"><img src="https://api.codeclimate.com/v1/badges/79bd06570c69943a6d73/test_coverage" /></a>
-[![Build Status](https://travis-ci.org/makkov/project-lvl1-s284.svg?branch=master)](https://travis-ci.org/makkov/project-lvl1-s284)
+[![Build Status](https://travis-ci.org/makkov/hexlet_projects-brain_games.svg?branch=master)](https://travis-ci.org/makkov/hexlet_projects-brain_games)
 ## the project contains games:<p>
 - balance (find a balanced number)<p>
 - calc (number calculator)<p>
